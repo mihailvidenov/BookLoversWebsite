@@ -4,6 +4,7 @@ using BookLoversWebsite.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookLoversWebsite.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221129185603_EntitiesAdded")]
+    partial class EntitiesAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -58,7 +60,7 @@ namespace BookLoversWebsite.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Authors", (string)null);
+                    b.ToTable("Authors");
                 });
 
             modelBuilder.Entity("BookLoversWebsite.Infrastructure.Data.Models.Book", b =>
@@ -105,7 +107,7 @@ namespace BookLoversWebsite.Infrastructure.Migrations
 
                     b.HasIndex("PublisherId");
 
-                    b.ToTable("Books", (string)null);
+                    b.ToTable("Books");
                 });
 
             modelBuilder.Entity("BookLoversWebsite.Infrastructure.Data.Models.Genre", b =>
@@ -123,7 +125,7 @@ namespace BookLoversWebsite.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Genres", (string)null);
+                    b.ToTable("Genres");
                 });
 
             modelBuilder.Entity("BookLoversWebsite.Infrastructure.Data.Models.Publisher", b =>
@@ -141,7 +143,7 @@ namespace BookLoversWebsite.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Publishers", (string)null);
+                    b.ToTable("Publishers");
                 });
 
             modelBuilder.Entity("BookLoversWebsite.Infrastructure.Data.Models.Quote", b =>
@@ -163,7 +165,7 @@ namespace BookLoversWebsite.Infrastructure.Migrations
 
                     b.HasIndex("AuthorId");
 
-                    b.ToTable("Quotes", (string)null);
+                    b.ToTable("Quotes");
                 });
 
             modelBuilder.Entity("BookLoversWebsite.Infrastructure.Data.Models.User", b =>
@@ -245,7 +247,7 @@ namespace BookLoversWebsite.Infrastructure.Migrations
 
                     b.HasIndex("AuthorId");
 
-                    b.ToTable("UserAuthor", (string)null);
+                    b.ToTable("UserAuthor");
                 });
 
             modelBuilder.Entity("BookLoversWebsite.Infrastructure.Data.Models.UserBook", b =>
@@ -260,7 +262,7 @@ namespace BookLoversWebsite.Infrastructure.Migrations
 
                     b.HasIndex("BookId");
 
-                    b.ToTable("UserBook", (string)null);
+                    b.ToTable("UserBook");
                 });
 
             modelBuilder.Entity("BookLoversWebsite.Infrastructure.Data.Models.UserQuote", b =>
@@ -275,7 +277,7 @@ namespace BookLoversWebsite.Infrastructure.Migrations
 
                     b.HasIndex("QuoteId");
 
-                    b.ToTable("UserQuote", (string)null);
+                    b.ToTable("UserQuote");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
