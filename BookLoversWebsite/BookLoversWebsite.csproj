@@ -19,4 +19,8 @@
     <ProjectReference Include="..\BookLoversWebsite.Core\BookLoversWebsite.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\template\" />
+  </ItemGroup>
+
 </Project>

@@ -1,6 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace BookLoversWebsite.Models.User
+namespace BookLoversWebsite.Core.Models.User
 {
     public class RegisterViewModel
     {
@@ -22,4 +27,5 @@ namespace BookLoversWebsite.Models.User
         [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; } = null!;
     }
+
 }
